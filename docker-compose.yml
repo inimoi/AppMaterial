@@ -1,0 +1,14 @@
+version: "3.4"
+
+
+services:
+
+  poste:
+    image: analogic/poste.io
+    restart: always
+    network_mode: "host"
+    volumes:
+      - /home/workspace-docker/poste-docker/mail-data/:/data
+
+    environment:
+      - HTTPS=ON
